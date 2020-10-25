@@ -1,6 +1,6 @@
 youtube-dl -f best -x $1 ;
 
-detox *.m4a ;
+detox *.* ;
 
 for x in $( ls *.m4a -1 ) ; do ffmpeg -i $x $x.wav ; rm $x  ; done
 
