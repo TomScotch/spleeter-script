@@ -12,8 +12,6 @@ for x in $( ls _* -d -1 ) ; do sh join.sh $x ; done
 
 for x in $( ls _* -d -1 ) ; do sh mix.sh $x ; done
 
-for x in $( ls _*/*.m4a ) ; do sh convert.sh $x _$x ; done
+for x in $( ls _*/* -d -1 ) ; do sh convert.sh $x ; done
 
 for x in $( ls _*/0* -1 -d ) ; do rm -rdf $x ; done
-
-for x in $( ls _*/*.wav -1 ) ; do rm $x ; done
