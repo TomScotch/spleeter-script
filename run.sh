@@ -12,7 +12,7 @@ for x in $( ls _* -d -1 ) ; do sh join.sh $x ; done
 
 for x in $( ls _* -d -1 ) ; do sh mix.sh $x ; done
 
-for x in $( ls _*/* -d -1 ) ; do sh convert.sh $x ; done
+for x in $( ls _*/*.* -1 ) ; do sh convert.sh $x ; done
 
 for x in $( ls _*/0* -1 -d ) ; do rm -rdf $x ; done
 
