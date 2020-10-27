@@ -1,12 +1,8 @@
-conda init bash ; 
-
-conda activate spleeter ;
-
-# sudo apt update ; sudo apt install ffmpeg shntool -y ;
+# sudo apt install ffmpeg shntool -y ;
 
 mkdir $1 ; cd $1 ;
 
-youtube-dl -f best -x $2 ;
+youtube-dl -q -f best -x $2 ;
 
 detox *.* ;
 
@@ -25,3 +21,5 @@ for x in $( ls _*/*.* -1 ) ; do sh ../convert.sh $x ; done
 for x in $( ls _*/0* -1 -d ) ; do rm -rdf $x ; done
 
 for x in $( ls _*/*.wav -1 ) ; do rm $x ; done
+
+rm -rdf $1/pretrained_models/
