@@ -22,4 +22,6 @@ for x in $( ls _*/0* -1 -d ) ; do rm -rdf $x ; done
 
 for x in $( ls _*/*.wav -1 ) ; do rm $x ; done
 
-rm -rdf $1/pretrained_models/
+#for x in $( ls _*/*mix.*.m4a -1 ) ; do ../silence.sh $x ; done
+
+rm -rdf pretrained_models ;
