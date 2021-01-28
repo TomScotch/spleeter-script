@@ -1,1 +1,1 @@
-mkdir _$1 ; ffmpeg -i $1 -f segment -segment_time 90 -c copy _$1/%03d.wav ; rm $1
+mkdir _$1 ; mp3splt -d _$1 -t 10.00 $1
