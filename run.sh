@@ -21,4 +21,4 @@ for x in $( ls _*/0* -1 -d ) ; do rm -rdf $x ; done
 
 for x in $( ls _*/*.wav -1 ) ; do rm $x ; done
 
-rm -rdf pretrained_models ;
+#rm -rdf pretrained_models ;
